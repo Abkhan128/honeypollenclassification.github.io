@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Honey Pollen Detection</title>
+    <style>
+        body {
+            background-image: url("background.png");
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 800px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        ul {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 5px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Honey Pollen Detection</h1>
+    <img src="{{ img_path }}" alt="Annotated Image">
+    <h2>Detection Report:</h2>
+    <ul>
+        {% for line in detection_report %}
+            <li>{{ line }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
